@@ -1,0 +1,3 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ["functions", "deploy", "discovery", "--source=.", "--trigger-http", "--runtime=python311"]
