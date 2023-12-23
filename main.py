@@ -6,7 +6,7 @@ count = 0
 
 
 @functions_framework.http
-def test(request):
+def discovery(request):
     """
     HTTP Cloud Function that counts how many times it is executed
     within a specific instance.
