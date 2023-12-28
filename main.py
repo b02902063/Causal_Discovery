@@ -46,10 +46,10 @@ def discovery(request):
     
     if "dtype" in user_input:
         args.append("--dtype")
-        args.appned(user_input["dtype"])
+        args.append(user_input["dtype"])
     if "constraint" in user_input:
         args.append("--constraint")
-        args.appned(user_input["constraint"])
+        args.append(user_input["constraint"])
         
     job.run(
         replica_count=1,
