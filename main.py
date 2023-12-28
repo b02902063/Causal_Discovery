@@ -1,5 +1,4 @@
 import functions_framework
-from google.cloud import storage
 import os
 import uuid
 from datetime import datetime
