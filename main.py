@@ -37,7 +37,7 @@ def discovery(request):
         container_uri=TRAIN_IMAGE_URI
     )
     
-    model_id = uuid.uuid4()
+    model_id = str(uuid.uuid4())
     args = ["--data_csv",
             user_input["data"],
             "--model-id",
