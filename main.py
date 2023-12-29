@@ -9,7 +9,7 @@ import torch
 
 PROJECT_ID = "ameai-causal"
 REGION = "asia-east1"
-MODEL_BUCKET_URI = "gs://causal_models" #
+MODEL_BUCKET_URI = "gs://causal_data" #
 STAGING_BUCKET_URI = "gs://causal_models" #causal_data
     
     
