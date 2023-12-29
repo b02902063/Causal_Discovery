@@ -10,16 +10,6 @@ import torch
 PROJECT_ID = "ameai-causal"
 REGION = "asia-east1"
 MODEL_BUCKET_URI = "gs://causal_models"
-
-@functions_framework.http
-def inference(request):
-    user_input = request.get_json()
-    
-    model_id = 
-    
-    model = torch.load()
-    
-    MODEL_BUCKET_URI
     
 @functions_framework.http
 def discovery(request):
