@@ -1,3 +1,6 @@
+
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ["functions", "deploy", "discovery", "--source=.", "--trigger-http", "--runtime=python311", "--memory=4GB", "--cpu=2"]
+  env:
+  - 'TRAINER_IMAGE'='asia.gcr.io/ameai-causal/causal-causica@sha256:5edcd523e3e6477c655ca129b93c9214917c3a1ed301fdb508b1c7fb50efb75b'

@@ -4,12 +4,23 @@ import uuid
 from datetime import datetime
 import json
 from google.cloud import aiplatform
+import torch
 
 
 PROJECT_ID = "ameai-causal"
 REGION = "asia-east1"
-BUCKET_URI = "gs://causal_data"
+MODEL_BUCKET_URI = "gs://causal_models"
 
+@functions_framework.http
+def inference(request):
+    user_input = request.get_json()
+    
+    model_id = 
+    
+    model = torch.load()
+    
+    MODEL_BUCKET_URI
+    
 @functions_framework.http
 def discovery(request):
     """
@@ -30,7 +41,7 @@ def discovery(request):
 
     TIMESTAMP = datetime.now().strftime("%Y%m%d-%H%M%S")
     JOB_DISPLAY_NAME = "pytorch-custom-job"
-    TRAIN_IMAGE_URI = "asia.gcr.io/ameai-causal/causal-causica@sha256:46f7cb587d8cb5ebf43578437724e3d967defdbcec69b89eea8407d479921d4c"
+    TRAIN_IMAGE_URI = os.environ["Trainer_Image"]
 
     job = aiplatform.CustomContainerTrainingJob(
         display_name=JOB_DISPLAY_NAME,
@@ -43,7 +54,7 @@ def discovery(request):
             "--model-id",
             model_id,
             "--model-dir",
-            "gs://causal_models/",
+            MODEL_BUCKET_URI,
             ]
     
     if "dtype" in user_input:
