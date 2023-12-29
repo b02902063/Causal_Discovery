@@ -42,6 +42,8 @@ def discovery(request):
             user_input["data"],
             "--model-id",
             model_id,
+            "--model-dir",
+            "gs://causal_models/",
             ]
     
     if "dtype" in user_input:
