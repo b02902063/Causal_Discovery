@@ -54,6 +54,7 @@ def discovery(request):
     job.run(
         replica_count=1,
         machine_type="n1-standard-4",
+        sync=False,
         args=args
     )
 
